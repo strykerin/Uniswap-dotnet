@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageProjectUrl>https://github.com/strykerin/Uniswap-dotnet</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageTags>DeFi, Uniswap, Ethereum, Decentralized Exchange, DEX</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
