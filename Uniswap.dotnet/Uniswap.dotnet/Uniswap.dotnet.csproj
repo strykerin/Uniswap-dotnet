@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>Uniswap dotnet</PackageId>
+    <PackageId>Uniswap.dotnet</PackageId>
     <Description>A dotnet standard wrapper for the Uniswap V2 Subgraph on The Graph GraphQL API.</Description>
     <PackageProjectUrl>https://github.com/strykerin/Uniswap-dotnet</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
