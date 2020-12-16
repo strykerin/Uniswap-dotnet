@@ -25,7 +25,7 @@ private readonly IUniswap _uniswap;
 
 public WeatherForecastController(IUniswap uniswap)
 {
-  _uniswap = uniswap;
+    _uniswap = uniswap;
 }
 ```
 
@@ -59,6 +59,7 @@ We get the following JSON response:
       "token1": {
         "symbol": "WETH"
       }
-    },
-[...]
+    }
+    ...
+}
 ``` 
