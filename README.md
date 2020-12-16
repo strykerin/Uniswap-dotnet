@@ -59,7 +59,5 @@ We get the following JSON response:
       "token1": {
         "symbol": "WETH"
       }
-    }
-    ...
-}
+    },
 ``` 
