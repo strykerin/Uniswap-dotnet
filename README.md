@@ -3,6 +3,8 @@
 
 A dotnet standard wrapper for the Uniswap V2 Subgraph on The Graph GraphQL API.
 
+The Uniswap Subgraph can be found [here](https://thegraph.com/explorer/subgraph/uniswap/uniswap-v2).
+
 ## Installation
 Available on [Nuget](https://www.nuget.org/packages/Uniswap.dotnet).
 
