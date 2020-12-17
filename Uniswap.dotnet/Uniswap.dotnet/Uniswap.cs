@@ -21,7 +21,7 @@ namespace Uniswap.dotnet
             {
                 Query = @"
                     {
-                      pairs {
+                        pairs(first: 150, orderBy: reserveETH orderDirection: desc){
                         token0 {
                           symbol
                         }
