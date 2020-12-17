@@ -15,6 +15,10 @@ namespace Uniswap.dotnet
             _graphQLClient = graphQLHttpClient ?? throw new ArgumentNullException(nameof(graphQLHttpClient));
         }
 
+        /// <summary>
+        /// Get the first 150 most liquid market pairs ordered by desc
+        /// </summary>
+        /// <returns></returns>
         public async Task<Pools> GetMostLiquidMarketPairs()
         {
             var query = new GraphQLRequest
