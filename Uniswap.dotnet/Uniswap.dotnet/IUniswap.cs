@@ -6,5 +6,6 @@ namespace Uniswap.dotnet
     public interface IUniswap
     {
         Task<Pools> GetMostLiquidMarketPairs();
+        Task<TopTokens> GetTopTokens();
     }
 }

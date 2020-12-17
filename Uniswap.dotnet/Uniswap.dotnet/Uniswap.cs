@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using System;
 using GraphQL;
 using Uniswap.dotnet.Entities;
@@ -24,22 +25,44 @@ namespace Uniswap.dotnet
             var query = new GraphQLRequest
             {
                 Query = @"
-                    {
-                        pairs(first: 150, orderBy: reserveETH orderDirection: desc){
-                        token0 {
-                          symbol
-                        }
-                        token1 {
-                          symbol
-                        }
-                        reserveETH
-                        reserveUSD
-                      }
+                {
+                    pairs(first: 150, orderBy: reserveETH orderDirection: desc){
+                    token0 {
+                      symbol
                     }
+                    token1 {
+                      symbol
+                    }
+                    reserveETH
+                    reserveUSD
+                  }
+                }
                 "
             };
 
-            var response = await _graphQLClient.SendQueryAsync<Pools>(query);
+            GraphQLResponse<Pools> response = await _graphQLClient.SendQueryAsync<Pools>(query);
+            return response.Data;
+        }
+
+        public async Task<TopTokens> GetTopTokens()
+        {
+            var query = new GraphQLRequest
+            {
+                Query = @"
+                {
+                  tokens (first: 150, orderBy: tradeVolumeUSD orderDirection: desc){
+                    symbol
+                    name
+                    tradeVolume
+                    tradeVolumeUSD
+                    totalSupply
+                    totalLiquidity
+                  }
+                }
+                "
+            };
+
+            GraphQLResponse<TopTokens> response = await _graphQLClient.SendQueryAsync<TopTokens>(query);
             return response.Data;
         }
     }
